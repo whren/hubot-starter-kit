@@ -10,7 +10,7 @@ Everything you need to get started with [Hubot](https://github.com/github/hubot)
 * Automated workflow (external-scripts.json regeneration on npm postinstall, 
 automatic reload on script changes, etc). 
 * Dockerfile which you can use to build your own custom Docker image (Dockerfile.ARMv7 for your Raspberry PI 2).
-* [Skype](https://github.com/shyiko/hubot-skype-over-phantomjs)* / [HipChat](https://github.com/hipchat/hubot-hipchat) / [Slack](https://github.com/slackhq/hubot-slack) adapters. 
+* [Skype](https://github.com/shyiko/hubot-skype-over-phantomjs)* adapter. 
 * Redis brain.
 
 > \* Depends on [PhantomJS](http://phantomjs.org/) being installed and 
@@ -23,7 +23,7 @@ Add/remove stuff to suit your needs.
 > PREREQUISITES: Git, Node, NPM. Also, if you don't have CoffeeScript installed - run `npm install -g coffee-script`.  
  
 ```sh
-git clone https://github.com/shyiko/hubot-starter-kit && cd hubot-starter-kit 
+git clone https://github.com/whren/hubot-starter-kit && cd hubot-starter-kit 
 npm install
 npm run start-dev # try asking "hubot help"
 ```
@@ -34,10 +34,10 @@ npm run start-dev # try asking "hubot help"
 ## Building Docker image
 
 ```sh
-docker build -t shyiko/hubot .
+docker build -t whren/hubot .
 ```
 
-> ... or `docker build -f Dockerfile.ARMv7 -t shyiko/hubot .` for ARMv7.  
+> ... or `docker build -f Dockerfile.ARMv7 -t whren/hubot .` for ARMv7.  
 
 ## Deploying 
 
@@ -47,7 +47,7 @@ docker run --name hubot --link hubot-redis-brain:redis \
   -e REDIS_URL=redis://redis:6379/hubot \
   -e HUBOT_SKYPE_USERNAME=<microsoft_account> \
   -e HUBOT_SKYPE_PASSWORD=<password> \
-  -d shyiko/hubot --adapter skype-over-phantomjs
+  -d whren/hubot --adapter skype-over-phantomjs
 ```
 
 > ... on ARMv7 replace `redis:3.0.1` with `shyiko/armv7-redis`. 
@@ -56,4 +56,4 @@ docker run --name hubot --link hubot-redis-brain:redis \
 
 ## License
 
-[MIT](https://github.com/shyiko/hubot-starter-kit/blob/master/mit.license)
+[MIT](https://github.com/whren/hubot-starter-kit/blob/master/mit.license)
