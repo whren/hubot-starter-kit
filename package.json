@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shyiko/hubot-starter-kit"
+    "url": "https://github.com/whren/hubot-starter-kit"
   },
   "private": true,
   "scripts": {
@@ -17,9 +17,8 @@
   "dependencies": {
     "hubot": "^2.12.0",
     "hubot-help": "^0.1.1",
+    "hubot-scripts": "^2.16.2",
     "hubot-skype-over-phantomjs": "^0.1.0",
-    "hubot-hipchat": "^2.12.0-5",
-    "hubot-slack": "^3.3.0",
     "hubot-redis-brain": "^0.0.2"
   },
   "devDependencies": {
